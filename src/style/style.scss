@@ -1,15 +1,25 @@
 // Import de polices d'écritures de Google Fonts
-// @import url();
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 //Création de varibles de styles
 :root{
     --full-width: 100%;
     --full-height: 100vh;
+    --blueHDM: #1d4594;
+    --rougeHDM: #e52240;
+    --greyText: #5b5b5a;
+    --poppins: 'Poppins', sans-serif;
+    --pad_horiz_case_recue: 40px;
+    --pad_verti_case_recue: 45px;
 }
 
 body{
     padding: 0;
     margin: 0;
+    font-family: var(--poppins);
+}
+
+div.margin_container{
+    margin: 0 10vw;
 }
 
 //Thème clair et sombre pour le projet
@@ -22,4 +32,6 @@ body{
 }
 
 //Import de fichiers styles des composants
-// @import url();
+@import url(composants/Header.scss);
+@import url(composants/Footer.scss);
+@import url(pages/Accueil.scss);
