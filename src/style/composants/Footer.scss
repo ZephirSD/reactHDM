@@ -1,0 +1,31 @@
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+footer{
+    background-color: var(--blueHDM);
+    width: var(--full-width);
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 25px 0;
+    div{
+        color: white;
+        p{
+            margin: 0;
+        }
+    }
+    div.sociaux{
+        @include displayFlex();
+        align-items: center;
+        div.case_icon{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+}
