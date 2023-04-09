@@ -1,0 +1,111 @@
+div.container_recue{
+    width: var(--full_width);
+    height: 500px;
+    background-image: url(../../assets/image1_accueil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    div.case_recrue_pop{
+        width: calc(450px - var(--pad_horiz_case_recue) * 2);
+        border-radius: 15px;
+        height: calc(280px - var(--pad_verti_case_recue) * 2);
+        background-color: white;
+        margin-left: 15vw;
+        padding: var(--pad_verti_case_recue) var(--pad_horiz_case_recue);
+        h2.titre_recrue_pop{
+            font-size: 1.60rem;
+            text-transform: uppercase;
+            color: var(--blueHDM);
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+        p.para_recrue_pop{
+            margin: 10px 0;
+        }
+        button.btn_recrue_pop{
+            background-color: var(--rougeHDM);
+            border-radius: 25px;
+            border: none;
+            color: white;
+            font-size: 0.85rem;
+            padding: 10px 25px;
+            font-weight: 600;
+            margin-top: 25px;
+        }
+    }
+}
+div.a_propos{
+    width: var(--full_width);
+    background-color: white;
+    div.grid_a_propos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 45px 0px;
+        h2.titre_a_propos{
+            font-size: 1.95rem;
+            margin: 15px 0;
+        }
+        h3.sous_titre_a_propos{
+            font-size: 1.25rem;
+            margin: 15px 0;
+        }
+        p.intro_a_propos{
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        p.para_a_propos{
+            font-size: 0.85rem;
+            margin: 10px 0;
+        }
+        div.image_a_propos{
+            width: var(--full_width);
+            height: var(--full_width);
+            clip-path: polygon(11% 0, 100% 0%, 100% 88%, 0% 100%);
+            background-color: gray;
+        }
+    }
+}
+div.case_metier{
+    padding: 45px 0;
+    h2.titre_metier{
+        font-size: 1.95rem;
+        text-align: center;
+        margin: 15px 0px;
+    }
+    p.synt_metier{
+        text-align: center;
+        margin: 10px 0;
+    }
+    div.grid_card_metier{
+        display: grid;
+        column-gap: 35px;
+        margin-top: 25px;
+        div.card_metier{
+            border-radius: 15px;
+            box-shadow: 0 10px 20px #E8ECF4;
+            position: relative;
+            padding: 25px 65px;
+            h2.titre_card{
+                color: var(--blueHDM);
+                font-size: 1.40rem;
+            }
+            p.para_card{
+                font-size: 0.85rem;
+            }
+            button.btn_card_metier{
+                position: absolute;
+                background-color: var(--rougeHDM);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                padding: 15px;
+                bottom: 5px;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
