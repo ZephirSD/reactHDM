@@ -1,0 +1,89 @@
+@mixin backgroundCard {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin resetPosition {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+section.associes_section{
+    height: calc(100vh - (var(--height_header) + var(--height_footer) + var(--padding_footer) * 2 + 15px));
+    div.grid_case_associes{
+        margin-top: 15px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 25px;
+        .card_associe{
+            margin: 0 auto;
+            box-shadow: 0 10px 20px #E8ECF4;
+            border-radius: 25px;
+            @include backgroundCard();
+            width: 12vw;
+            height: 28vh;
+            padding: 10px 25px;
+            color: white;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            .filter_dark{
+                position: absolute;
+                @include resetPosition();
+                padding: 10px 25px;
+                width: var(---full-width);
+                height: var(---full-width);
+                background-color: rgba(0, 0, 0, 0.452);
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                h2,h5{
+                    font-weight: 500;
+                    margin: 0px;
+                }
+            }
+        }
+        .case_flex_card{
+            position: absolute;
+            @include resetPosition();
+            width: var(---full-width);
+            height: calc(100vh - (var(--height_header) + var(--height_footer) + var(--padding_footer) * 2 + 15px));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+            background-color: rgba(255, 255, 255, 0.521);
+            .case_animate_card{
+                width: 35vw;
+                background-color: var(--blueHDM);
+                border-radius: 25px;
+                padding: 10px 25px;
+                color: white;
+                padding: 35px 55px;
+                .grid_card_animate{
+                    display: grid;
+                    grid-template-columns: repeat(2, 5vw 100%);
+                    column-gap: 15px;
+                    .photo_card{
+                        border-radius: 15px;
+                        height: 12.5vh;
+                        @include backgroundCard();
+                    }
+                    .case_info_card{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h2,h5{
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
