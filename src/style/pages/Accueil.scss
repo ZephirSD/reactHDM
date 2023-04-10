@@ -64,7 +64,11 @@ div.a_propos{
             width: var(--full_width);
             height: var(--full_width);
             clip-path: polygon(11% 0, 100% 0%, 100% 88%, 0% 100%);
-            background-color: gray;
+            background-image: url(../../assets/image2_accueil.jpg);
+            background-size: 125%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 0.45s linear ease-in-out;
         }
     }
 }
