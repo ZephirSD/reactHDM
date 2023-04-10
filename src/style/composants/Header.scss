@@ -15,7 +15,7 @@
 
 header{
     width: 100%;
-    height: 80px;
+    height: var(--height_header);
     background-color: var(--blueHDM);
     @include gridHeader();
     position: relative;
