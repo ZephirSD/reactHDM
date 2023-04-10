@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardMetier from '../components/CardMetier'
 import { metiers } from '../components/base/metier_base'
+import { useEffect } from 'react'
 
 function Accueil() {
+    const [intScroll, setintScroll] = useState(0);
+    useEffect(()=> {
+        window.addEventListener('scroll', () => {
+            let scrollY = window.scrollY;
+            setintScroll(scrollY);
+        })
+    })
   return (
     <>
       <div className="container_recue">
@@ -21,7 +29,7 @@ function Accueil() {
                     <p className="intro_a_propos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse commodi vitae veniam illum neque libero omnis vel dolorum sit dicta ab soluta suscipit beatae minima maiores non, maxime quaerat quam. Est doloremque odio iusto quaerat.</p>
                     <p className="para_a_propos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestiae voluptatibus consequatur tempore magni, blanditiis repellat mollitia officia commodi obcaecati nulla sed necessitatibus. Voluptates quibusdam possimus minus eius nesciunt harum quas dicta distinctio tenetur vero fuga, officiis sapiente dolorem libero labore autem molestias illo beatae.</p>
                 </div>
-                <div className="image_a_propos"></div>
+                <div className="image_a_propos" style={{backgroundPositionX: `calc(50% - ${Math.round(intScroll * 0.115)}px)`}}></div>
             </div>
         </div>
       </div>
