@@ -1,0 +1,74 @@
+section.grid_contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: var(--full-width);
+    height: calc(100vh - (var(--height_header) + var(--height_footer) + var(--padding_footer) * 2 + 20px * 2));
+    margin: 20px 0px;
+    background-color: whitesmoke;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #E8ECF4;
+    div.formulaire{
+        padding: 20px 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        div.form_box{
+            display: flex;
+            flex-direction: column;
+            width: var(--full-width);
+            margin: 10px 0;
+            position: relative;
+            input{
+                padding: 10px 5px;
+                border-radius: 25px;
+                background-color: rgb(230, 230, 230);
+                border: none;
+                font-family: var(--poppins);
+                &:focus-visible{
+                    outline: none;
+                }
+                &::placeholder{
+                    font-family: var(--poppins);
+                    font-size: 14px;
+                }
+            }
+            textarea{
+                padding: 10px 5px;
+                border-radius: 15px;
+                background-color: rgb(230, 230, 230);
+                border: none;
+                font-family: var(--poppins);
+                height: 15vh;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            button{
+                background-color: var(--rougeHDM);
+                padding: 5px 25px;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                position: absolute;
+                cursor: pointer;
+                font-family: var(--poppins);
+                font-size: 13px;
+            }
+        }
+    }
+    .popupCase{
+         div{
+            font-family: var(--poppins);
+            h1{
+                text-align: center;
+                color: var(--blueHDM);
+            }
+            p.popTel{
+                color: var(--rougeHDM);
+                text-decoration: underline;
+            }
+        }
+    }
+}
