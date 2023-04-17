@@ -3,6 +3,7 @@ import  './style/style.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageModel from './pages/PageModel';
 import { menu } from './components/base/menu_header';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
   return (
