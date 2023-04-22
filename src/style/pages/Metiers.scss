@@ -1,0 +1,70 @@
+@mixin gridCase(){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5vw;
+}
+
+div.flex_titre{
+    display: flex;
+    h1.titre_metier{
+        background-color: #a8a8a7;
+        color: white;
+        padding: 15px 40px;
+        width: 50%;
+    }
+}
+
+
+section.case_metier{
+    @include gridCase();
+    div.metier_texte{
+        padding: 30px;
+        p{
+            font-size: 15px;
+        }
+        div.case_flex_point{
+            display: flex;
+            justify-content: flex-end;
+            div.case_liste_point{
+                margin-top: 25px;
+                background-color: var(--blueHDM);
+                color: white;
+                border-radius: 10px;
+                padding: 15px 35px;
+                ul{
+                    padding-left: 15px;
+                    li{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    div.metier_image{
+        padding: 30px;
+        div.case_image_compe{
+            position: relative;
+            img.image_compe{
+                width: 26vw;
+                height: 36vh;
+                object-fit: cover;
+                object-position: center;
+            }
+            div.compe{
+                position: absolute;
+                transform: translate(55%, -60%);
+                padding: 15px 35px;
+                background-color: var(--rougeHDM);
+                border-radius: 10px;
+                color: white;
+                ul{
+                    padding-left: 15px;
+                    li{
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
