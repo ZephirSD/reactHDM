@@ -14,8 +14,8 @@ function Header() {
                 <ul>
                     {
                         menu.map((mn,index) => (
-                            <li key={index} onClick={() => setSwitchPath(mn.permalien.replace("/", ""))}>
-                                <Link to={mn.permalien} style={switchPath === mn.permalien.replace("/", "") ? {color: "white",textDecoration: "none"} : {color: "var(--greyText)",textDecoration: "none"}}>{mn.titre}</Link>
+                            <li key={index}>
+                                <Link to={mn.permalien} onClick={() => setSwitchPath(mn.permalien.replace("/", ""))} style={switchPath === mn.permalien.replace("/", "") ? {color: "white",textDecoration: "none"} : {color: "var(--greyText)",textDecoration: "none"}}>{mn.titre}</Link>
                                 { 
                                     mn.permalien.replace("/", "") === switchPath ? 
                                     (
